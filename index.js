@@ -1,15 +1,16 @@
 // Code your solutions in this file
 const cards = ["John", "Jane", "Mary", "Joseph"];
 
-function writeCards () {
+function writeCards (cards, eventName="suprise") {
+    let sentCards = [];  //new array
     for ( let i = 0; i < cards.length; i++){
-    console.log (`Thank you, ${cards[i]}, for the wonderful surprise gift!`);
-    
+    let message= `Thank you, ${cards[i]}, for the wonderful ${eventName} gift!`;
+    //console.log (cards);
+    sentCards.push(message);
     }
-    return [...cards];
-
+    return sentCards;
+   
 };
-const sentCards = writeCards(cards);
 
 function countDown() {
     let count = 11;
